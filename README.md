@@ -8,6 +8,7 @@ The [Arduino File](Arduino/homing_forward_inverse_kinematics_3/homing_forward_in
 # Python API
 Using the API the robot can be controlled. The following files creates the link between the the arduino output and python files
 [teensy_link.py](ar4-api/teensy_link.py)
+
 [arm2d.py](ar4-api/arm2d.py)
 
 At first the robot will go to the limit switches and initialize itself. Then 2 joints can be controlled giving the joint angle value. Using forward Kinematics the end-effector position can be found.
