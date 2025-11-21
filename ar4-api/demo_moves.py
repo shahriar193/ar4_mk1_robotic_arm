@@ -53,6 +53,11 @@ print("\n".join(res.reply))
 
 time.sleep(2.0)
 
+res = arm.move_math(0.0, 20)
+print("\n".join(res.reply))
+
+time.sleep(2.0)
+
 
 print("Status:")
 st = arm.status()

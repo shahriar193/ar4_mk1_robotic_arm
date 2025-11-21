@@ -202,3 +202,22 @@ class TeensyLink:
                     # Nothing has arrived at all within the overall window; give up.
                     break
         return lines
+    
+
+    def send_line_noreply(self, line: str) -> None:
+            """
+            Write one newline-terminated command without waiting for any reply.
+
+            Used for high-rate control commands like 'V v1 v2' where the firmware
+            intentionally prints nothing, to avoid blocking the vision loop.
+            """
+            payload = (line.strip() + "\n").encode("utf-8")
+            try:
+                self.ser.write(payload)
+                self.ser.flush()
+            except serial.SerialException:
+                # If port dropped, reopen once and resend.
+                self._open()
+                self.ser.write(payload)
+                self.ser.flush()
+
