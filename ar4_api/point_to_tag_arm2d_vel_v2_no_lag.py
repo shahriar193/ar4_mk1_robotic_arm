@@ -26,7 +26,7 @@ import numpy as np
 import cv2
 from pupil_apriltags import Detector
 
-from arm2d import Arm2D   # uses your existing API with set_velocity_math()
+from ar4_api.arm2d import Arm2D   # uses your existing API with set_velocity_math()
 
 
 # ===================== CAMERA + TAG CONFIG =====================

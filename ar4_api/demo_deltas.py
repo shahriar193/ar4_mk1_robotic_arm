@@ -2,7 +2,7 @@
 
 
 
-from ar4-api.arm2d import Arm2D
+from ar4_api.arm2d import Arm2D
 import time
 
 arm = Arm2D()          # set port="COM5" or "/dev/cu.usbmodemXXXX" if auto-detect fails
