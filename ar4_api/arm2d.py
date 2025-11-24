@@ -301,7 +301,7 @@
 from typing import Dict, Any, List, Optional
 from dataclasses import dataclass
 import re
-from teensy_link import TeensyLink
+from .teensy_link import TeensyLink
 
 
 @dataclass
